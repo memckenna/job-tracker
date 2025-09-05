@@ -1,9 +1,7 @@
 package com.jobtracker.graphql;
 
 import com.jobtracker.model.JobApplication;
-import com.jobtracker.model.User;
 import com.jobtracker.repository.JobApplicationRepository;
-import com.jobtracker.repository.UserRepository;
 import com.jobtracker.security.CurrentUserProvider;
 
 import lombok.Data;
