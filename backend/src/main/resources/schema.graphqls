@@ -1,0 +1,34 @@
+type Query {
+  me: User
+  getApplications: [JobApplication]
+}
+
+type Mutation {
+  register(email: String!, password: String!): String
+  login(email: String!, password: String!): String
+  createApplication(input: ApplicationInput!): JobApplication
+}
+
+
+type User {
+  id: ID!
+  email: String!
+}
+
+type JobApplication {
+  id: ID!
+  position: String!
+  company: String!
+  status: String!
+  notes: String
+  deadline: String
+  userId: String
+}
+
+input ApplicationInput {
+  position: String!
+  company: String!
+  status: String!
+  notes: String
+  deadline: String
+}
