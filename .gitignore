@@ -1,0 +1,61 @@
+# === Backend (Spring Boot) ===
+/backend/target/
+*.log
+*.class
+*.jar
+*.war
+*.iml
+*.ipr
+*.iws
+
+# Maven
+backend/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# === Frontend (React + TypeScript) ===
+/frontend/node_modules/
+/frontend/build/
+/frontend/.env
+
+# === IDEs (IntelliJ, VS Code, Eclipse, STS) ===
+.idea/
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+.springBeans
+.sts4-cache
+.apt_generated
+
+# === NetBeans ===
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Misc ===
+.env
+*.swp
+
+### VS Code ###
+.vscode/
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Compiled class files
+*.class
+
+# Logs
+*.log
