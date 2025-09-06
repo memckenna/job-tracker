@@ -1,21 +1,32 @@
-import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import {
+  ApolloClient,
+  InMemoryCache,
+  HttpLink,
+  ApolloLink,
+} from '@apollo/client';
 
-const httpLink = createHttpLink({
-  uri: 'http://localhost:8080/graphql', // Spring Boot backend
+// 1. Create the HTTP link to your backend
+const httpLink = new HttpLink({
+  uri: 'http://localhost:8080/graphql',
 });
 
-const authLink = setContext((_, { headers }) => {
+// 2. Create an auth middleware link (modern way)
+const authLink = new ApolloLink((operation, forward) => {
   const token = localStorage.getItem('jwt');
-  return {
+  operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
       Authorization: token ? `Bearer ${token}` : '',
     },
-  };
+  }));
+  return forward(operation);
 });
 
+// 3. Combine auth and HTTP links
+const link = ApolloLink.from([authLink, httpLink]);
+
+// 4. Create the Apollo client
 export const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link,
   cache: new InMemoryCache(),
 });
