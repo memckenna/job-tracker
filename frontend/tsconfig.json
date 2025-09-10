@@ -18,9 +18,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["node"],
+    "noResolve": false
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules/@apollo",
+    "node_modules/graphql",
+    "build",
+    "dist"
   ]
 }

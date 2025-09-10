@@ -6,12 +6,12 @@ import org.springframework.web.servlet.config.annotation.*;
 
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
-
+    @SuppressWarnings("null")
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/graphql")
-                .allowedOrigins("http://localhost:3000") // Frontend
-                .allowedMethods("*")
+                .allowedOrigins("http://localhost:3000")  // frontend origin
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
