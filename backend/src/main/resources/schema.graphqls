@@ -9,7 +9,6 @@ type Mutation {
   createApplication(input: ApplicationInput!): JobApplication
 }
 
-
 type User {
   id: ID!
   email: String!

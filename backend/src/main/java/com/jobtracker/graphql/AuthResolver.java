@@ -21,4 +21,6 @@ public class AuthResolver {
     public String login(@Argument String email, @Argument String password) {
         return authService.login(email, password);
     }
+
+    
 }
