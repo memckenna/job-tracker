@@ -45,6 +45,7 @@ Thumbs.db
 # === Misc ===
 .env
 *.swp
+.env.*
 
 ### VS Code ###
 .vscode/
@@ -59,3 +60,14 @@ Thumbs.db
 
 # Logs
 *.log
+
+
+# Ignore direnv file
+.envrc
+
+# Ignore raw Spring Boot config with secrets
+backend/src/main/resources/application.properties
+backend/src/main/resources/application-local.properties
+backend/src/main/resources/application-local.yml
+backend/src/main/resources/application.yml
+backend/src/test/resources/application.properties

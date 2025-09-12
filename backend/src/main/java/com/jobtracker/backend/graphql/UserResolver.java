@@ -1,8 +1,9 @@
-package com.jobtracker.graphql;
+package com.jobtracker.backend.graphql;
 
-import com.jobtracker.model.User;
-import com.jobtracker.repository.UserRepository;
-import com.jobtracker.security.CurrentUserProvider;
+import com.jobtracker.backend.model.User;
+import com.jobtracker.backend.repository.UserRepository;
+import com.jobtracker.backend.security.CurrentUserProvider;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.security.access.prepost.PreAuthorize;

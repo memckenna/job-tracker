@@ -1,8 +1,9 @@
-package com.jobtracker.service;
+package com.jobtracker.backend.service;
 
-import com.jobtracker.model.User;
-import com.jobtracker.repository.UserRepository;
-import com.jobtracker.security.JwtUtil;
+import com.jobtracker.backend.model.User;
+import com.jobtracker.backend.repository.UserRepository;
+import com.jobtracker.backend.security.JwtUtil;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

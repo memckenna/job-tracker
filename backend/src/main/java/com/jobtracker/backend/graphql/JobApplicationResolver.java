@@ -1,8 +1,8 @@
-package com.jobtracker.graphql;
+package com.jobtracker.backend.graphql;
 
-import com.jobtracker.model.JobApplication;
-import com.jobtracker.repository.JobApplicationRepository;
-import com.jobtracker.security.CurrentUserProvider;
+import com.jobtracker.backend.model.JobApplication;
+import com.jobtracker.backend.repository.JobApplicationRepository;
+import com.jobtracker.backend.security.CurrentUserProvider;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

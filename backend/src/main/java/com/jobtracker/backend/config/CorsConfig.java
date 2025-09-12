@@ -1,3 +1,4 @@
+package com.jobtracker.backend.config;
 // package com.jobtracker.config;
 
 // // import org.springframework.context.annotation.Bean;

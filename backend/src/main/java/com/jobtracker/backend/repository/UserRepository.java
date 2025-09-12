@@ -1,7 +1,8 @@
-package com.jobtracker.repository;
+package com.jobtracker.backend.repository;
 
-import com.jobtracker.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.jobtracker.backend.model.User;
 
 import java.util.Optional;
 

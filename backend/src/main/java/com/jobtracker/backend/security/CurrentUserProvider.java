@@ -1,4 +1,4 @@
-package com.jobtracker.security;
+package com.jobtracker.backend.security;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
